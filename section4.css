@@ -1,14 +1,76 @@
-#particleSprayContainer {
+#bubblesContainer {
   width: 250px;
   height: 200px;
   background-color: white;
-  display: flex;
+  position: relative;
 }
 
+#bubblesClippingPath {
+  width: 100%;
+  height: 240px;
+  bottom: 0;
+  position: absolute;
+  clip-path: inset(40px 0 0 0);
+}
 
-#particleSprayContainer > * {
+.bubble {
+  background-color: lightblue;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.bubble.small {
   width: 20px;
   height: 20px;
-  background-color: red;
-  border-radius: 10px;
+  animation: 3s infinite normal smallBubbling;
+}
+
+.bubble.small:nth-child(1) {
+  left: 10px;
+}
+.bubble.small:nth-child(2) {
+  right: 30px;
+}
+.bubble.small:nth-child(3) {
+  right: 100px;
+}
+
+.bubble.medium {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.bubble.large {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+/*#patrolCircle {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  animation-duration: 3s;
+  animation-name: patrol;
+  animation-iteration-count: infinite;
+  border-radius: 30px;
+}*/
+
+@keyframes smallBubbling {
+  0% {
+    bottom: 0;
+  }
+
+  /*50% {
+    bottom: 50%; d
+  }
+
+  75% {
+    bottom: 75%;
+  }*/
+
+  100% {
+    bottom: 100%;
+  }
 }
