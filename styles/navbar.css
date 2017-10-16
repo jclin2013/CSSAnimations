@@ -26,7 +26,9 @@
 .navbarHamburgerContainer {
   position: absolute;
   right: 20px;
-  top: 0;
+  top: 0px;
+  height: 220px;
+  width: 120px;
 }
 
 .fa-bars {
@@ -37,8 +39,16 @@
   cursor: pointer;
 }
 
-.fa-bars:hover {
+.navbarHamburgerContainer:hover .fa-bars {
   color: gold;
+}
+
+#navBarBlockBox {
+  position: absolute;
+  height: 50px;
+  width: 90px;
+  right: 50px;
+  z-index: 5;
 }
 
 #dropDownContainer{
