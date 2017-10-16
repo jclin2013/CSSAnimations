@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>CSS Animations by Jon Lin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="section1.css">
     <link rel="stylesheet" href="section2.css">
     <link rel="stylesheet" href="section3.css">
@@ -11,10 +12,36 @@
     <link rel="stylesheet" href="section5.css">
   </head>
   <body>
+    <div id="navbar">
 
-    <!-- rotating cube code from CSS Demo: http://vveleva.com/css_demos/ -->
+      <div class="navbarLogoAndText">
+        <img class="navbarLogo" src=""></img>
+
+        <a href="https://github.com/jclin2013/CSSAnimations" target="_blank">
+          <text class="navbarText">CSS Animation Examples</text>
+        </a>
+      </div>
+
+      <div class="navbarHamburgerContainer">
+        <div class="fa fa-bars">☰</div>
+
+        <div id="dropDownContainer">
+          <div class="arrow-up"></div>
+          <div class="dropdownMenu">
+            <a href="https://www.jon-lin.com/" target="_blank">About Me</a>
+            <a href="https://github.com/jclin2013/" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/jclin2013/" target="_blank">LinkedIn</a>
+            <a href="https://angel.co/jclin2013" target="_blank">AngelList</a>
+            <a href="https://drive.google.com/file/d/0B2wkz0QyfcNAem95ZGdEUEFnMFU/view?usp=sharing" target="_blank">Resume</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div id="mainContainer">
       <div id="section1">
+        <!-- rotating cube code from CSS Demo: http://vveleva.com/css_demos/ -->
         <h1 class="sectionHeading">Rotating Cube</h2>
         <div class="cubeWrap">
           <div class="cube">
