@@ -1,0 +1,14 @@
+#particleSprayContainer {
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+}
+
+
+#particleSprayContainer > * {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 10px;
+}
