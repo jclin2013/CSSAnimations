@@ -25,7 +25,7 @@ button, article, footer, small {
   flex-direction: column;
 }
 
-#section1, #section2, #section3, #section4 {
+#mainContainer > * {
   width: 100%;
   height: 300px;
   background-color: gray;
@@ -39,6 +39,6 @@ button, article, footer, small {
   background-color: lightgray;
 }
 
-#section3 {
+#section3, #section5 {
   background-color: gray;
 }
