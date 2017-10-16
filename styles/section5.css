@@ -1,4 +1,25 @@
-/*#pyramid {
+#tetraWrap {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  position: absolute;
+  top: 100px;
+}
+
+#tetraWrap #tetra {
+  height: 173px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+#tetra > * {
+  position: absolute;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 173px solid black;
+  opacity: 0.5;
+}
+
+/*#tetra {
   -webkit-animation: spin 5s linear infinite;
   -moz-animation: spin 5s linear infinite;
 }
@@ -19,32 +40,34 @@
   to {
     -moz-transform: rotateY(360deg) rotateX(-20deg);
   }
+}*/
+
+#tetraFront {
+  /*-webkit-transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);*/
+  animation: spin 5s linear infinite;
 }
 
-#pyramid > div {
-  position: absolute;
-  border-color: transparent transparent transparent rgba(50, 50, 50, 0.5);
-  border-style: solid;
-  border-radius: 3px;
-  border-width: 200px 0 200px 346px;
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
-#pyramid > div:first-child  {
-  -webkit-transform: rotateY(-19.5deg);
-  -moz-transform: rotateY(-19.5deg);
-}
-
-#pyramid > div:nth-child(2) {
+/*#tetraLeft {
   -webkit-transform: rotateY(90deg) rotateZ(60deg);
   -moz-transform: rotateY(90deg) rotateZ(60deg);
-}
+}*/
 
-#pyramid > div:nth-child(3) {
+/*#tetra > div:nth-child(3) {
   -webkit-transform: rotateX(60deg) rotateY(19.5deg);
   -moz-transform: rotateX(60deg) rotateY(19.5deg);
 }
 
-#pyramid > div:nth-child(4) {
+#tetra > div:nth-child(4) {
   -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
   -webkit-transform-origin: 0 0 -326px;
   -moz-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
