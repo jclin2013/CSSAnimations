@@ -8,9 +8,10 @@
 #bubblesClippingPath {
   width: 100%;
   height: 240px;
-  bottom: 0;
   position: absolute;
-  clip-path: inset(40px 0 0 0);
+  overflow: hidden;
+  clip-path: inset(0 0 40px 0);
+  top: 0;
 }
 
 .bubble {
@@ -22,14 +23,17 @@
 .bubble.small {
   width: 20px;
   height: 20px;
-  animation: 3s infinite normal smallBubbling;
+  animation: 2s linear infinite normal smallBubbling;
+  bottom: 0;
 }
 
 .bubble.small:nth-child(1) {
   left: 10px;
+  bottom: 20px;
 }
 .bubble.small:nth-child(2) {
   right: 30px;
+  bottom: 25px;
 }
 .bubble.small:nth-child(3) {
   right: 100px;
@@ -39,38 +43,88 @@
   width: 30px;
   height: 30px;
   border-radius: 20px;
+  animation: 4s linear infinite 0s mediumBubbling;
+  bottom: 0;
+}
+
+.bubble.medium:nth-child(4) {
+  left: 20px;
+}
+.bubble.medium:nth-child(5) {
+  left: 60px;
+  bottom: 20px;
+}
+.bubble.medium:nth-child(6) {
+  right: 100px;
+  bottom: 40px;
 }
 
 .bubble.large {
   width: 40px;
   height: 40px;
   border-radius: 30px;
+  animation: 10s linear infinite 0s largeBubbling;
+  bottom: 0;
 }
 
-/*#patrolCircle {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  animation-duration: 3s;
-  animation-name: patrol;
-  animation-iteration-count: infinite;
-  border-radius: 30px;
-}*/
+.bubble.large:nth-child(7) {
+  left: 0;
+}
+.bubble.large:nth-child(8) {
+  left: 40px;
+  bottom: 10px;
+}
+.bubble.large:nth-child(9) {
+  right: 50px;
+  bottom: 20px;
+}
+
+.bubble.large:nth-child(10) {
+  right: 100px;
+  bottom: 15px;
+}
 
 @keyframes smallBubbling {
-  0% {
-    bottom: 0;
+  10% {
+    transform: translate3d(20px, 0, 0);
   }
 
-  /*50% {
-    bottom: 50%; d
+  25% {
+    transform: translate3d(-10px, 0, 100px);
   }
 
-  75% {
-    bottom: 75%;
-  }*/
+  50% {
+    transform: translate3d(20px, 10px, 0);
+  }
 
   100% {
     bottom: 100%;
+    transform: translate3d(-30px, 0, 0);
+  }
+}
+
+@keyframes mediumBubbling {
+  10% {
+    transform: translate3d(40px, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(60px, 0, 100px);
+  }
+
+  50% {
+    transform: translate3d(50px, 0, 0);
+  }
+
+  100% {
+    bottom: 100%;
+    transform: translate3d(40px, 0, 0);
+  }
+}
+
+@keyframes largeBubbling {
+  100% {
+    bottom: 100%;
+    transform: translate3d(80px, 0, 0);
   }
 }
