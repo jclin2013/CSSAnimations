@@ -45,6 +45,6 @@ button, article, footer, small {
   top: 30px;
 }
 
-#section2, #section4 {
+#mainContainer > *:nth-child(2n) {
   background-color: lightgray;
 }
