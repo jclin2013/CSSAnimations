@@ -16,7 +16,7 @@
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 173px solid black;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /*#tetra {
@@ -45,22 +45,27 @@
 #tetraFront {
   /*-webkit-transform: rotateY(-20deg);
   -moz-transform: rotateY(-20deg);*/
-  animation: spin 5s linear infinite;
+  /*transform: translateZ(173px);*/
+  transform: rotateX(30deg);
+  /*animation: spin 5s linear infinite;*/
+
 }
 
-@keyframes spin {
+/*@keyframes spin {
   from {
-    transform: rotateY(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
   }
-}
-
-/*#tetraLeft {
-  -webkit-transform: rotateY(90deg) rotateZ(60deg);
-  -moz-transform: rotateY(90deg) rotateZ(60deg);
 }*/
+
+#tetraLeft {
+  /*transform: rotateY(100deg) translateZ(100px);*/
+  /*-webkit-transform: rotateY(90deg) rotateZ(60deg);*/
+  /*-moz-transform: rotateY(90deg) rotateZ(60deg);*/
+  transform: rotateY(-60deg);
+}
 
 /*#tetra > div:nth-child(3) {
   -webkit-transform: rotateX(60deg) rotateY(19.5deg);
@@ -73,3 +78,12 @@
   -moz-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
   -moz-transform-origin: 0 0 -326px;
 }*/
+
+#tetraWrap #tetra {
+  animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
