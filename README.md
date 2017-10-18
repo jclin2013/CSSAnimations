@@ -4,7 +4,7 @@
 ## Description
 A collection of interesting animations you can make with pure CSS.
 
-## Example of Rotating Polygon
+## Example of Rotating Polyhedron
 
 <img src="rotating-tetrahedron.gif">
 
