@@ -2,7 +2,7 @@
   perspective: 1000px;
   perspective-origin: 50% 50%;
   position: absolute;
-  top: 100px;
+  top: 110px;
 }
 
 #tetraWrap #tetra {
@@ -15,75 +15,33 @@
   position: absolute;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 173px solid black;
-  opacity: 0.2;
+  border-bottom: 173px solid blue;
 }
-
-/*#tetra {
-  -webkit-animation: spin 5s linear infinite;
-  -moz-animation: spin 5s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateY(0deg) rotateX(-20deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg) rotateX(-20deg);
-  }
-}
-
-@-moz-keyframes spin {
-  from {
-    -moz-transform: rotateY(0deg) rotateX(-20deg);
-  }
-  to {
-    -moz-transform: rotateY(360deg) rotateX(-20deg);
-  }
-}*/
 
 #tetraFront {
-  /*-webkit-transform: rotateY(-20deg);
-  -moz-transform: rotateY(-20deg);*/
-  /*transform: translateZ(173px);*/
-  transform: rotateX(30deg);
-  /*animation: spin 5s linear infinite;*/
-
+  transform-origin: 50% 100%;
+  transform: rotate(180deg) rotateX(-109.5deg);
+  border-bottom: 173px solid red;
 }
 
-/*@keyframes spin {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}*/
 
 #tetraLeft {
-  /*transform: rotateY(100deg) translateZ(100px);*/
-  /*-webkit-transform: rotateY(90deg) rotateZ(60deg);*/
-  /*-moz-transform: rotateY(90deg) rotateZ(60deg);*/
-  transform: rotateY(-60deg);
+  transform-origin: 0% 100%;
+  transform: rotate(-60deg) rotateX(-109.5deg);
+  border-bottom: 173px solid orange;
 }
 
-/*#tetra > div:nth-child(3) {
-  -webkit-transform: rotateX(60deg) rotateY(19.5deg);
-  -moz-transform: rotateX(60deg) rotateY(19.5deg);
+#tetraRight {
+  transform-origin: 100% 100%;
+  transform: rotate(60deg) rotateX(-109.5deg);
+  border-bottom: 173px solid green;
 }
-
-#tetra > div:nth-child(4) {
-  -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
-  -webkit-transform-origin: 0 0 -326px;
-  -moz-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px);
-  -moz-transform-origin: 0 0 -326px;
-}*/
 
 #tetraWrap #tetra {
-  animation: rotate 20s infinite linear;
+  animation: rotate 10s infinite linear;
 }
 
 @keyframes rotate {
-  from { transform: rotateX(0deg) rotateY(0deg); }
-  to { transform: rotateX(360deg) rotateY(360deg); }
+  from { transform: rotateY(0deg) rotateZ(0deg)}
+  to { transform: rotateY(360deg) rotateZ(360deg)}
 }

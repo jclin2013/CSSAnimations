@@ -40,9 +40,14 @@ button, article, footer, small {
   font-size: 30px;
 }
 
-#section1 .sectionHeading, #section5 .sectionHeading {
+#section1 .sectionHeading {
   position: absolute;
   top: 30px;
+}
+
+#section5 .sectionHeading {
+  position: absolute;
+  top: 15px;
 }
 
 #mainContainer > *:nth-child(2n) {
