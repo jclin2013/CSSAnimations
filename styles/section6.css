@@ -50,6 +50,7 @@
 
 .hoverDropdown {
   position: relative;
+  top: 1px;
 }
 
 .hoverDropdown > *:hover > .hoverDropdownItem {
