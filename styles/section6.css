@@ -1,0 +1,51 @@
+#hoverDropdownsContainer {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+}
+
+#hoverDropdownMiniNav {
+  width: 100%;
+  height: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "a b c d";
+  grid-gap: 5px;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+
+#hoverDropdownMiniNav > * {
+  text-align: center;
+}
+
+#hoverDropdownMiniNav > *:nth-child(1){
+  grid-area: a;
+}
+
+#hoverDropdownMiniNav > *:nth-child(2){
+  grid-area: b;
+}
+
+#hoverDropdownMiniNav > *:nth-child(3){
+  grid-area: c;
+}
+
+#hoverDropdownMiniNav > *:nth-child(4){
+  grid-area: d;
+}
+
+.hoverDropdown {
+  display: none;
+}
+
+#hoverDropdownMiniNav > *:hover .hoverBox {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#hoverDropdownMiniNav > *:hover .hoverDropdown {
+  /*visibility: visible;*/
+  display: inherit;
+  height: 60px;
+  background-color: lightblue;
+}
