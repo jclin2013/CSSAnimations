@@ -35,7 +35,7 @@
   grid-area: d;
 }
 
-.hoverDropdown {
+#hoverDropdownMiniNav .hoverDropdown {
   display: none;
 }
 
@@ -44,8 +44,36 @@
 }
 
 #hoverDropdownMiniNav > *:hover .hoverDropdown {
-  /*visibility: visible;*/
   display: inherit;
-  height: 60px;
   background-color: lightblue;
+}
+
+.hoverDropdown {
+  position: relative;
+}
+
+.hoverDropdown > *:hover > .hoverDropdownItem {
+  background-color: yellow;
+}
+
+.dropdownSubdrop {
+  display: none;
+  position: absolute;
+  margin-left: 100%;
+  top: 0;
+  width: 70px;
+}
+
+.hoverDropdown.four .dropdownSubdrop {
+  margin-left: 0;
+  left: -70px;
+}
+
+.hoverDropdown > *:hover > .hoverDropdownItem + .dropdownSubdrop {
+  display: inherit;
+  background-color: orange;
+}
+
+.dropdownSubdrop > *:hover {
+  background-color: pink;
 }
