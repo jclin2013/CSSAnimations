@@ -8,4 +8,4 @@ A collection of interesting animations you can make with pure CSS.
 
 <img src="rotating-tetrahedron.gif">
 
-[live-link]: https://jclin2013.github.io/CSSAnimations/
+[live-link]: https://jon-lin.github.io/CSSAnimations/
